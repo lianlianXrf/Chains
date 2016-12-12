@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chain-api.iml" filepath="$PROJECT_DIR$/chain-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chain-api-common/chain-api-common.iml" filepath="$PROJECT_DIR$/chain-api-common/chain-api-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chain-api-security/chain-api-security.iml" filepath="$PROJECT_DIR$/chain-api-security/chain-api-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chain-api-start/chain-api-start.iml" filepath="$PROJECT_DIR$/chain-api-start/chain-api-start.iml" />
+    </modules>
+  </component>
+</project>

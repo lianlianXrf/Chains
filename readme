@@ -1,7 +1,7 @@
-chain-api-common     -- ¹«¹²·½·¨°ü
-chain-api-security  -- °²È«Ïà¹Ørestapi
-chain-api-start  -- spring bootÆô¶¯£¬ÒÔ¼°ÆäËûÆô¶¯ÅäÖÃÏà¹ØAPI
+chain-api-common     -- å…¬å…±æ–¹æ³•åŒ…
+chain-api-security  -- å®‰å…¨ç›¸å…³restapi
+chain-api-start  -- spring bootå¯åŠ¨ï¼Œä»¥åŠå…¶ä»–å¯åŠ¨é…ç½®ç›¸å…³API
 
-ÒÀÀµ¹ØÏµ  start ----> api-security or other api-interface  ----> api-common
+ä¾èµ–å…³ç³»  start ----> api-security or other api-interface  ----> api-common
 
 readme

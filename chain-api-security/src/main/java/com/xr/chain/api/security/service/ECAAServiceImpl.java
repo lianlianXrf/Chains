@@ -21,10 +21,10 @@ public class ECAAServiceImpl implements ECAAService {
 
     @Override
     public void registerUser(String enrollmentID, String affiliation) throws Exception {
-    	RegistrationRequest req = new RegistrationRequest();
-    	req.setAffiliation(affiliation);
-    	req.setEnrollmentID(enrollmentID);
-    	this.xrChainService.register(req);
+        RegistrationRequest req = new RegistrationRequest();
+        req.setAffiliation(affiliation);
+        req.setEnrollmentID(enrollmentID);
+        this.xrChainService.register(req);
     }
 
     @Override

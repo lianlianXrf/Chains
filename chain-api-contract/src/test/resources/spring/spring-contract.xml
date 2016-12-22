@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/task  
+		http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+	
+	<bean id="springContextUtil" class="com.xr.chain.contract.common.SpringContextUtil" />
+	
+	<!-- 智能合约语言配置 begin -->	
+	<bean id="GO_LANG" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">    
+        <property name="staticField" value="org.hyperledger.fabric.sdk.ChaincodeLanguage.GO_LANG" />    
+    </bean>
+    
+    <bean id="JAVA" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">    
+        <property name="staticField" value="org.hyperledger.fabric.sdk.ChaincodeLanguage.JAVA" />    
+    </bean>
+    <!-- 智能合约语言配置 end -->	
+	
+	<!-- 智能合约 -->
+	<bean id="xrContractService_myccj" class="com.xr.chain.contract.service.deploy.impl.XRContractService">
+		<property name="chaincodeName" value="${contract.name}" />
+		<property name="chaincodePath" value="${contract.path}" />
+		<property name="chaincodeLanguage" ref="JAVA" />
+		<property name="xrChainService" ref="xrChainService" />
+		<property name="enrollmentId" value="${contract.member_name}" />
+		<property name="affiliation" value="${contract.member_affiliation}" />
+	</bean>
+	
+</beans>

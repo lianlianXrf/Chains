@@ -10,16 +10,17 @@
 	
 	<context:component-scan base-package="com.xr"/>
 	
-	<context:property-placeholder location="classpath:config.properties" />
+	<context:property-placeholder location="classpath:*.properties" />
 
 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="locations">
 			<list>
 				<value>classpath*:config.properties</value>
+				<value>classpath*:contract.properties</value>
 			</list>
 		</property>
 	</bean>
-
+	
 	<bean id="xrChainService" class="com.xr.chain.api.common.sdk.XRChainService" init-method="init">
 		<constructor-arg><value>${chain.name}</value></constructor-arg>
 		<property name="memberUrl" value="${chain.memberServiceUrl}" />
@@ -29,7 +30,6 @@
 		<property name="adminToken" value="${chain.member.admin.token}" />
 		<property name="keyStorePath" value="${chain.keyStorePath}" />
 	</bean>
-
-	<import resource="spring/spring-web.xml" />
-	<import resource="spring/spring-contract.xml" />
+	
+	<import resource="classpath:spring/spring-contract.xml" />
 </beans>

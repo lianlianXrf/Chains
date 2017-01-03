@@ -2,6 +2,4 @@ chain-api-common     -- 公共方法包
 chain-api-security  -- 安全相关restapi
 chain-api-start  -- spring boot启动，以及其他启动配置相关API
 
-依赖关系  start ----> api-security or other api-interface  ----> api-common
-
-readme
+模块间依赖关系  start ----> api-security or other api-interface  ----> api-common
